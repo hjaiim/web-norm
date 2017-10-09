@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.line-scale-party > div{
+			width: 4px;
+			height: 35px;
+			display: inline-block
+		}
+
+		.line-scale-party > div{
+			border-radius: 2px;
+			margin: 2px;
+			background-color: red
+		}
+		@-webkit-keyframes line-scale-party {
+			0%, 100% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+			50% {
+				-webkit-transform: scale(.5);
+				transform: scale(.5)
+			}
+		}
+
+		@keyframes line-scale-party {
+			0%, 100% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+			50% {
+				-webkit-transform: scale(.5);
+				transform: scale(.5)
+			}
+		}
+
+		.line-scale-party > div:nth-child(1) {
+			-webkit-animation-delay: .55s;
+			animation-delay: .55s;
+			-webkit-animation-duration: 1.23s;
+			animation-duration: 1.23s
+		}
+
+		.line-scale-party > div:nth-child(2) {
+			-webkit-animation-delay: .55s;
+			animation-delay: .55s;
+			-webkit-animation-duration: .55s;
+			animation-duration: .55s
+		}
+
+		.line-scale-party > div:nth-child(3) {
+			-webkit-animation-delay: 90ms;
+			animation-delay: 90ms;
+			-webkit-animation-duration: .39s;
+			animation-duration: .39s
+		}
+
+		.line-scale-party > div:nth-child(4) {
+			-webkit-animation-delay: .5s;
+			animation-delay: .5s;
+			-webkit-animation-duration: .59s;
+			animation-duration: .59s
+		}
+
+		.line-scale-party > div {
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			-webkit-animation-name: line-scale-party;
+			animation-name: line-scale-party;
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+			-webkit-animation-delay: 0;
+			animation-delay: 0
+		}
+
+	</style>
+</head>
+<body>
+<div class="line-scale-party" style="margin: 300px">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+</body>
+</html>

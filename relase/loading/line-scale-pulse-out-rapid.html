@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.line-scale-pulse-out-rapid > div{
+			width: 4px;
+			height: 35px;
+			display: inline-block;
+			border-radius: 2px;
+			margin: 2px;
+			background-color: red
+		}
+		@-webkit-keyframes line-scale-pulse-out-rapid {
+			0%, 90% {
+				-webkit-transform: scaley(1);
+				transform: scaley(1)
+			}
+			80% {
+				-webkit-transform: scaley(.3);
+				transform: scaley(.3)
+			}
+		}
+
+		@keyframes line-scale-pulse-out-rapid {
+			0%, 90% {
+				-webkit-transform: scaley(1);
+				transform: scaley(1)
+			}
+			80% {
+				-webkit-transform: scaley(.3);
+				transform: scaley(.3)
+			}
+		}
+
+		.line-scale-pulse-out-rapid > div {
+			vertical-align: middle;
+			-webkit-animation: line-scale-pulse-out-rapid .9s -.5s infinite cubic-bezier(.11, .49, .38, .78);
+			animation: line-scale-pulse-out-rapid .9s -.5s infinite cubic-bezier(.11, .49, .38, .78)
+		}
+
+		.line-scale-pulse-out-rapid > div:nth-child(2), .line-scale-pulse-out-rapid > div:nth-child(4) {
+			-webkit-animation-delay: -.25s !important;
+			animation-delay: -.25s !important
+		}
+
+		.line-scale-pulse-out-rapid > div:nth-child(1), .line-scale-pulse-out-rapid > div:nth-child(5) {
+			-webkit-animation-delay: 0s !important;
+			animation-delay: 0s !important
+		}
+	</style>
+</head>
+<body>
+<div class="line-scale-pulse-out-rapid" style="margin: 300px">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+</body>
+</html>

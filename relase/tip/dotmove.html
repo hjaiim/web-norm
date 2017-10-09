@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>dotmove</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .wrapper {
+            height: 200px;
+            width: 50%;
+            margin: 20px;
+            background: #f4726d;
+            padding: 100px;
+        }
+
+        .container {
+            position: relative;
+            list-style: none;
+            cursor: default;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .dotstyle span {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border-radius: 50%;
+            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.3);
+            text-indent: -999em;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .dotstyle {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0 16px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        span {
+            color: #f4726d;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .dotstyle-dotmove:last-child {
+            position: absolute;
+            left: 0;
+            margin: 0;
+            width: 48px;
+            -webkit-transition: -webkit-transform 0.3s ease;
+            transition: transform 0.3s ease;
+        }
+
+        .dotstyle-dotmove:last-child::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -1px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #c44d48;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        .dotstyle-dotmove.current:first-child~li:last-child {
+            -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+        }
+
+        .dotstyle-dotmove.current:nth-child(2)~li:last-child {
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+        }
+
+        .dotstyle-dotmove.current:nth-child(3)~li:last-child {
+            -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+        }
+
+        .dotstyle-dotmove.current:nth-child(4)~li:last-child {
+            -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+        }
+
+        .dotstyle-dotmove.current:nth-child(5)~li:last-child {
+            -webkit-transform: translateX(400%);
+            transform: translateX(400%);
+        }
+
+        .dotstyle-dotmove.current:nth-child(6)~li:last-child {
+            -webkit-transform: translateX(500%);
+            transform: translateX(500%);
+        }
+
+        .dotstyle-dotmove span {
+            -webkit-transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease;
+        }
+
+        .dotstyle-dotmove span:hover,
+        .dotstyle-dotmove span:focus {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="container">
+            <li class="dotstyle dotstyle-dotmove">
+                <span></span>
+            </li>
+            <li class="dotstyle dotstyle-dotmove">
+                <span></span>
+            </li>
+            <li class="dotstyle dotstyle-dotmove">
+                <span></span>
+            </li>
+            <li class="dotstyle dotstyle-dotmove">
+                <span></span>
+            </li>
+            <li class="dotstyle dotstyle-dotmove">
+                <span></span>
+            </li>
+            <li class="dotstyle dotstyle-dotmove">
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $("li").click(function () {
+        $(this).addClass("current").siblings().removeClass("current");
+    })
+</script>

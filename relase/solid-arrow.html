@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>solid-arrow</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .arrow {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            display: inline-block;
+            margin: 10px 10px;
+        }
+
+        .arrow:after,
+        .arrow:before {
+            content: "";
+            border-color: transparent;
+            border-style: solid;
+            position: absolute;
+        }
+
+        .arrow-left:before {
+            border: none;
+            background-color: #555;
+            height: 30%;
+            width: 50%;
+            top: 35%;
+            left: 50%;
+        }
+
+        .arrow-left:after {
+            left: -50%;
+            top: 0;
+            border-width: 20px 20px;
+            border-right-color: #555;
+        }
+
+        .arrow-right:before {
+            border: none;
+            background-color: #555;
+            height: 30%;
+            width: 50%;
+            top: 35%;
+        }
+
+        .arrow-right:after {
+            left: 50%;
+            top: 0;
+            border-width: 20px 20px;
+            border-left-color: #555;
+        }
+
+        .arrow-up:before {
+            border: none;
+            background-color: #555;
+            height: 50%;
+            width: 30%;
+            top: 50%;
+            left: 35%;
+        }
+
+        .arrow-up:after {
+            left: 0;
+            top: -50%;
+            border-width: 20px 20px;
+            border-bottom-color: #555;
+        }
+
+        .arrow-down:before {
+            border: none;
+            background-color: #555;
+            height: 50%;
+            width: 30%;
+            top: 0;
+            left: 35%;
+        }
+
+        .arrow-down:after {
+            left: 0;
+            top: 50%;
+            border-width: 20px 20px;
+            border-top-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <span class="arrow arrow-left"></span>
+    <span class="arrow arrow-right"></span>
+    <span class="arrow arrow-up"></span>
+    <span class="arrow arrow-down"></span>
+</body>
+
+</html>

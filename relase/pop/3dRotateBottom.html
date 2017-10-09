@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>3dRotateBottom</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		body,html{
+			height:100%;
+			width: 100%;
+			background: #e74c3c;
+		}
+		.md-modal {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			width: 50%;
+			max-width: 630px;
+			min-width: 320px;
+			height: auto;
+			z-index: 2000;
+			visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-webkit-transform: translateX(-50%) translateY(-50%);
+			-moz-transform: translateX(-50%) translateY(-50%);
+			-ms-transform: translateX(-50%) translateY(-50%);
+			transform: translateX(-50%) translateY(-50%);
+		}
+
+		.md-show {
+			visibility: visible;
+		}
+
+		.md-effect-14.md-modal {
+			-webkit-perspective: 1300px;
+			-moz-perspective: 1300px;
+			perspective: 1300px;
+		}
+
+		.md-overlay {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			visibility: hidden;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			opacity: 0;
+			background: rgba(0, 0, 0, 0.6);
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+
+		.md-show~.md-overlay {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.md-effect-14 .md-content {
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-transform: translateY(100%) rotateX(90deg);
+			-moz-transform: translateY(100%) rotateX(90deg);
+			-ms-transform: translateY(100%) rotateX(90deg);
+			transform: translateY(100%) rotateX(90deg);
+			-webkit-transform-origin: 0 100%;
+			-moz-transform-origin: 0 100%;
+			transform-origin: 0 100%;
+			opacity: 0;
+			-webkit-transition: all 0.3s ease-out;
+			-moz-transition: all 0.3s ease-out;
+			transition: all 0.3s ease-out;
+		}
+
+		.md-show.md-effect-14 .md-content {
+			-webkit-transform: translateY(0%) rotateX(0deg);
+			-moz-transform: translateY(0%) rotateX(0deg);
+			-ms-transform: translateY(0%) rotateX(0deg);
+			transform: translateY(0%) rotateX(0deg);
+			opacity: 1;
+		}
+
+		.md-content {
+			color: #fff;
+			background: #e74c3c;
+			position: relative;
+			border-radius: 3px;
+			margin: 0 auto;
+			width: 500px;
+			height: 300px;
+		}
+		.md-content button{
+			display: block;
+		    margin: 0 auto;
+		    font-size: 0.8em;
+		}
+		.btn-wrap{
+			padding-top: 150px;
+		}
+		button{
+			border: none;
+		    padding: 0.6em 1.2em;
+		    background: #c0392b;
+		    color: #fff;
+		    font-family: 'Lato', Calibri, Arial, sans-serif;
+		    font-size: 1em;
+		    letter-spacing: 1px;
+		    text-transform: uppercase;
+		    cursor: pointer;
+		    display: inline-block;
+		    margin: 3px 2px;
+		    border-radius: 2px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="modal-14" class="md-modal md-effect-14 md-show">
+		<div class="md-content">
+		<div class="btn-wrap">
+			<button class="md-close" id="close_btn">Close me!</button>
+			</div>
+		</div>
+	</div>
+	<div class="md-overlay"></div>
+	<div class="md-content">
+		<div class="btn-wrap">
+			<button class="md-close" id="open_btn">3dRotateBottom</button>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$("#close_btn").click(function(){
+		$("#modal-14").removeClass("md-show");
+	})
+	$("#open_btn").click(function(){
+		$("#modal-14").addClass("md-show");
+	})
+</script>

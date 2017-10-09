@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>puff</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            height: 275px;
+            width: 50%;
+            margin: 20px auto 0;
+            background: #f4726d;
+            padding: 50px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .dotstyle {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0 16px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .dotstyle-puff span {
+            border: 2px solid #fff;
+            -webkit-transition: border-color 0.3s ease;
+            transition: border-color 0.3s ease;
+        }
+
+        .dotstyle-puff span:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            background: #c44d48;
+            border-radius: 50%;
+            box-shadow: 0 0 1px #c44d48;
+            opacity: 0;
+            -webkit-transform: scale(3);
+            transform: scale(3);
+            -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease, visibility 0s 0.3s;
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+        }
+
+        .dotstyle span {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border-radius: 50%;
+            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.3);
+            text-indent: -999em;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        span {
+            color: #f4726d;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .dotstyle-puff span:hover,
+        .dotstyle-puff span:focus,
+        .dotstyle-puff.current span {
+            border-color: #c44d48;
+        }
+
+        .dotstyle-puff.current span::after {
+            visibility: visible;
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="container">
+        <li class="dotstyle dotstyle-puff">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-puff">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-puff">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-puff">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-puff">
+            <span></span>
+        </li>
+    </ul>
+</body>
+
+</html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $("li").click(function () {
+        $(this).addClass("current").siblings().removeClass("current");
+    })
+</script>

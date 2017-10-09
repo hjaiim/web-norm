@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bubble</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        } 
+        .bubble-box {
+            position: relative;
+            clear: both;
+            display: inline-block;
+            padding: 16px 40px 16px 20px;
+            margin: 0 0 20px 20px;
+            font: 16px/20px 'Noto Sans', sans-serif;
+            border-radius: 10px;
+            background-color: rgba(25, 147, 147, 0.2);
+        }
+
+        .bubble-box:after {
+            position: absolute;
+            top: 15px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-top: 15px solid rgba(25, 147, 147, 0.2);
+        }
+
+        .bubble-box.left:after {
+            border-left: 15px solid transparent;
+            left: -15px;
+        }
+
+        .bubble-box.right:after {
+            border-right: 15px solid transparent;
+            right: -15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bubble-box right">
+        Are we meeting today?
+    </div>
+    <br />
+    <div class="bubble-box left">
+        yes, what time suits you?
+    </div>
+</body>
+
+</html>

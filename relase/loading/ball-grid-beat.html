@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.ball-grid-beat > div{
+			-webkit-animation-fill-mode: both;
+			-webkit-animation-iteration-count: infinite
+		}
+		.ball-grid-beat > div{
+			height: 15px;
+			border-radius: 100%;
+			display: inline-block;
+			background-color: red;
+			margin: 2px
+		}
+		@-webkit-keyframes ball-grid-beat {
+			50% {
+				opacity: .7
+			}
+			100% {
+				opacity: 1
+			}
+		}
+
+		@keyframes ball-grid-beat {
+			50% {
+				opacity: .7
+			}
+			100% {
+				opacity: 1
+			}
+		}
+
+		.ball-grid-beat {
+			width: 57px
+		}
+
+		.ball-grid-beat > div:nth-child(1) {
+			-webkit-animation-delay: .49s;
+			animation-delay: .49s;
+			-webkit-animation-duration: .93s;
+			animation-duration: .93s
+		}
+
+		.ball-grid-beat > div:nth-child(2) {
+			-webkit-animation-delay: .4s;
+			animation-delay: .4s;
+			-webkit-animation-duration: 1.02s;
+			animation-duration: 1.02s
+		}
+
+		.ball-grid-beat > div:nth-child(3) {
+			-webkit-animation-delay: .63s;
+			animation-delay: .63s;
+			-webkit-animation-duration: 1.07s;
+			animation-duration: 1.07s
+		}
+
+		.ball-grid-beat > div:nth-child(4) {
+			-webkit-animation-delay: -40ms;
+			animation-delay: -40ms;
+			-webkit-animation-duration: .75s;
+			animation-duration: .75s
+		}
+
+		.ball-grid-beat > div:nth-child(5) {
+			-webkit-animation-delay: .21s;
+			animation-delay: .21s;
+			-webkit-animation-duration: 1.41s;
+			animation-duration: 1.41s
+		}
+
+		.ball-grid-beat > div:nth-child(6) {
+			-webkit-animation-delay: -80ms;
+			animation-delay: -80ms;
+			-webkit-animation-duration: .66s;
+			animation-duration: .66s
+		}
+
+		.ball-grid-beat > div:nth-child(7) {
+			-webkit-animation-delay: 0s;
+			animation-delay: 0s;
+			-webkit-animation-duration: 1.36s;
+			animation-duration: 1.36s
+		}
+
+		.ball-grid-beat > div:nth-child(8) {
+			-webkit-animation-delay: .78s;
+			animation-delay: .78s;
+			-webkit-animation-duration: 1.17s;
+			animation-duration: 1.17s
+		}
+
+		.ball-grid-beat > div:nth-child(9) {
+			-webkit-animation-delay: .2s;
+			animation-delay: .2s;
+			-webkit-animation-duration: 1.49s;
+			animation-duration: 1.49s
+		}
+
+		.ball-grid-beat > div {
+			width: 15px;
+			animation-fill-mode: both;
+			float: left;
+			-webkit-animation-name: ball-grid-beat;
+			animation-name: ball-grid-beat;
+			animation-iteration-count: infinite;
+			-webkit-animation-delay: 0;
+			animation-delay: 0
+		}
+	</style>
+</head>
+<body>
+<div class="ball-grid-beat" style="margin: 300px">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+</body>
+</html>

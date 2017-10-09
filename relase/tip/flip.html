@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flip</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            height: 275px;
+            width: 50%;
+            margin: 20px auto 0;
+            background: #f4726d;
+            padding: 50px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .dotstyle {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0 16px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .dotstyle-flip {
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+        }
+
+        .dotstyle-flip span {
+            background-color: transparent;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .dotstyle span {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border-radius: 50%;
+            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.3);
+            text-indent: -999em;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        span {
+            color: #f4726d;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .dotstyle-flip span::before,
+        .dotstyle-flip span::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: white;
+            content: '';
+            text-indent: 0;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .dotstyle-flip span::after {
+            background-color: #c44d48;
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+
+        .dotstyle-flip span:hover,
+        .dotstyle-flip span:focus {
+            opacity: 0.8;
+        }
+
+        .dotstyle-flip.current span {
+            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="container">
+        <li class="dotstyle dotstyle-flip">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-flip">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-flip">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-flip">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-flip">
+            <span></span>
+        </li>
+    </ul>
+</body>
+
+</html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $("li").click(function () {
+        $(this).addClass("current").siblings().removeClass("current");
+    })
+</script>

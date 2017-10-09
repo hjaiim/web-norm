@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.ball-pulse-rise > div {
+			-webkit-animation-fill-mode: both;
+			-webkit-animation-iteration-count: infinite
+		}
+
+		.ball-pulse-rise > div {
+			height: 15px;
+			border-radius: 100%;
+			display: inline-block;
+			background-color: red;
+			margin: 2px
+		}
+		.ball-pulse-rise > div {
+			width: 15px;
+			animation-fill-mode: both;
+			-webkit-animation-duration: 1s;
+			animation-duration: 1s;
+			-webkit-animation-timing-function: cubic-bezier(.15, .46, .9, .6);
+			animation-timing-function: cubic-bezier(.15, .46, .9, .6);
+			animation-iteration-count: infinite;
+			-webkit-animation-delay: 0;
+			animation-delay: 0
+		}
+
+		.ball-pulse-rise > div:nth-child(2n) {
+			-webkit-animation-name: ball-pulse-rise-even;
+			animation-name: ball-pulse-rise-even
+		}
+
+		.ball-pulse-rise > div:nth-child(2n-1) {
+			-webkit-animation-name: ball-pulse-rise-odd;
+			animation-name: ball-pulse-rise-odd
+		}
+		@-webkit-keyframes ball-pulse-rise-even {
+			0% {
+				-webkit-transform: scale(1.1);
+				transform: scale(1.1)
+			}
+			25% {
+				-webkit-transform: translateY(-30px);
+				transform: translateY(-30px)
+			}
+			50% {
+				-webkit-transform: scale(.4);
+				transform: scale(.4)
+			}
+			75% {
+				-webkit-transform: translateY(30px);
+				transform: translateY(30px)
+			}
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+
+		@keyframes ball-pulse-rise-even {
+			0% {
+				-webkit-transform: scale(1.1);
+				transform: scale(1.1)
+			}
+			25% {
+				-webkit-transform: translateY(-30px);
+				transform: translateY(-30px)
+			}
+			50% {
+				-webkit-transform: scale(.4);
+				transform: scale(.4)
+			}
+			75% {
+				-webkit-transform: translateY(30px);
+				transform: translateY(30px)
+			}
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+		@-webkit-keyframes ball-pulse-rise-odd {
+			0% {
+				-webkit-transform: scale(.4);
+				transform: scale(.4)
+			}
+			25% {
+				-webkit-transform: translateY(30px);
+				transform: translateY(30px)
+			}
+			50% {
+				-webkit-transform: scale(1.1);
+				transform: scale(1.1)
+			}
+			75% {
+				-webkit-transform: translateY(-30px);
+				transform: translateY(-30px)
+			}
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				-webkit-transform: scale(.75);
+				transform: scale(.75)
+			}
+		}
+
+		@keyframes ball-pulse-rise-odd {
+			0% {
+				-webkit-transform: scale(.4);
+				transform: scale(.4)
+			}
+			25% {
+				-webkit-transform: translateY(30px);
+				transform: translateY(30px)
+			}
+			50% {
+				-webkit-transform: scale(1.1);
+				transform: scale(1.1)
+			}
+			75% {
+				-webkit-transform: translateY(-30px);
+				transform: translateY(-30px)
+			}
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				-webkit-transform: scale(.75);
+				transform: scale(.75)
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="ball-pulse-rise" style="margin:300px;">
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+</body>
+</html>

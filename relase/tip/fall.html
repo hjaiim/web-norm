@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fall</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            height: 275px;
+            width: 50%;
+            margin: 20px auto 0;
+            background: #f4726d;
+            padding: 50px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .dotstyle {
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0 16px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .dotstyle-fall:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+            opacity: 0;
+            left: 0;
+            background-color: #c44d48;
+            border-radius: 50%;
+            -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+            -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s;
+            transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s;
+        }
+
+        .dotstyle-fall span {
+            -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+        }
+
+        .dotstyle span {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border-radius: 50%;
+            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.3);
+            text-indent: -999em;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        span {
+            color: #f4726d;
+            text-decoration: none;
+            outline: none;
+        }
+
+
+        .dotstyle-fall:hover span,
+        .dotstyle-fall span:focus,
+        .dotstyle-fall.current span {
+            background-color: #fff;
+        }
+
+        .dotstyle-fall.current::after {
+            opacity: 1;
+            visibility: visible;
+            -webkit-transition: -webkit-transform 0.3s ease, opacity 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+        }
+
+        .dotstyle-fall.current span {
+            opacity: 0;
+            -webkit-transform: translateY(200%);
+            transform: translateY(200%);
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="container">
+        <li class="dotstyle dotstyle-fall">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-fall">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-fall">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-fall">
+            <span></span>
+        </li>
+        <li class="dotstyle dotstyle-fall">
+            <span></span>
+        </li>
+    </ul>
+</body>
+
+</html>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+    $("li").click(function () {
+        $(this).addClass("current").siblings().removeClass("current");
+    })
+</script>

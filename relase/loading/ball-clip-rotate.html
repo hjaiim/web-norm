@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.ball-clip-rotate > div {
+			border-radius: 100%;
+			margin: 2px;
+			border: 2px solid red;
+			border-bottom-color: transparent;
+			height: 26px;
+			width: 26px;
+			background: 0 0 !important;
+			display: inline-block;
+			-webkit-animation: rotate .75s 0s linear infinite;
+			animation: rotate .75s 0s linear infinite
+		}
+
+		@keyframes rotate {
+			0% {
+				-webkit-transform: rotate(0);
+				transform: rotate(0)
+			}
+			50% {
+				-webkit-transform: rotate(180deg);
+				transform: rotate(180deg)
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg)
+			}
+		}
+
+		@keyframes scale {
+			30% {
+				-webkit-transform: scale(.3);
+				transform: scale(.3)
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="ball-clip-rotate" style="margin: 300px">
+	<div></div>
+</div>
+</body>
+</html>
