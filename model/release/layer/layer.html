@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>layer</title>
+	<link rel="stylesheet" href="css/base/base.css">
+	<link rel="stylesheet" href="css/layer.css">
+	<style>
+		.layer-area {
+			padding-top: 20px;
+			clear: both;
+			zoom: 1;
+		}
+
+		.layer-trigger {
+			margin: 0 6px 10px 0;
+			border: 1px solid #c9c9c9;
+			background-color: #ffffff;
+			color: #555555;
+			display: inline-block;
+			height: 38px;
+			line-height: 38px;
+			padding: 0 18px;
+			white-space: nowrap;
+			text-align: center;
+			font-size: 14px;
+			border-radius: 2px;
+			cursor: pointer;
+			outline: 0;
+			-webkit-appearance: none;
+			transition: all .3s;
+			-webkit-transition: all .3s;
+			box-sizing: border-box;
+		}
+
+		.layer-area .layer-trigger:hover {
+			border-color: #009688;
+			color: #333333;
+			opacity: .8;
+		}
+	</style>
+</head>
+<body>
+<div class="layer-area">
+	<button class="layer-trigger" data-modal="layer_show1">FadeBottom&line</button>
+	<button class="layer-trigger" data-modal="layer_show2">Bottom&line</button>
+	<button class="layer-trigger" data-modal="layer_show3">FadeRight&line</button>
+	<button class="layer-trigger" data-modal="layer_show4">Right&line</button>
+	<button class="layer-trigger" data-modal="layer_show5">FadeBottom&noline</button>
+	<button class="layer-trigger" data-modal="layer_show6">Bottom&noline</button>
+	<button class="layer-trigger" data-modal="layer_show7">FadeRight&line</button>
+	<button class="layer-trigger" data-modal="layer_show8">Right&line</button>
+	<button class="layer-trigger" data-modal="layer_show9">FadeBottom&line&box</button>
+	<button class="layer-trigger" data-modal="layer_show10">Bottom&line&box</button>
+	<button class="layer-trigger" data-modal="layer_show11">FadeRight&line&box</button>
+	<button class="layer-trigger" data-modal="layer_show12">Right&line&box</button>
+	<button class="layer-trigger" data-modal="layer_show13">FadeBottom&noline&box</button>
+	<button class="layer-trigger" data-modal="layer_show14">Bottom&noline&box</button>
+	<button class="layer-trigger" data-modal="layer_show15">FadeRight&noline&box</button>
+	<button class="layer-trigger" data-modal="layer_show16">Right&noline&box</button>
+</div>
+<div class="layer-show">
+	<div id="layer_show1" class="g-layer is-fixed animate-move1 hide"></div>
+	<div id="layer_show2" class="g-layer is-fixed animate-move2 hide"></div>
+	<div id="layer_show3" class="g-layer is-fixed animate-move3 hide"></div>
+	<div id="layer_show4" class="g-layer is-fixed animate-move4 hide"></div>
+	<div id="layer_show5" class="g-layer is-fixed animate-move5 hide"></div>
+	<div id="layer_show6" class="g-layer is-fixed animate-move6 hide"></div>
+	<div id="layer_show7" class="g-layer is-fixed animate-move7 hide"></div>
+	<div id="layer_show8" class="g-layer is-fixed animate-move8 hide"></div>
+	<div id="layer_show9" class="hide">
+		<div class="m-land is-releative">
+			<div class="g-layer is-absolute animate-move9"></div>
+		</div>
+	</div>
+	<div id="layer_show10" class="hide">
+		<div class="m-land is-releative">
+			<div class="g-layer is-absolute animate-move10"></div>
+		</div>
+	</div>
+	<div id="layer_show11" class="hide">
+		<div class="m-land is-releative">
+			<div class="g-layer is-absolute animate-move11"></div>
+		</div>
+	</div>
+	<div id="layer_show12" class="hide">
+		<div class="m-land is-releative">
+			<div class="g-layer is-absolute animate-move12"></div>
+		</div>
+	</div>
+	<div id="layer_show13" class="hide">
+		<div class="m-land is-releative">
+			<div class="g-layer is-absolute animate-move13"></div>
+		</div>
+	</div>
+	<div id="layer_show14" class="hide">
+		<div class="m-land is-releative">
+			<div class="g-layer is-absolute animate-move14"></div>
+		</div>
+	</div>
+	<div id="layer_show15" class="hide">
+		<div class="m-land is-releative">
+			<div class="g-layer is-absolute animate-move15"></div>
+		</div>
+	</div>
+	<div id="layer_show16" class="hide">
+		<div class="m-land is-releative">
+			<div class="g-layer is-absolute animate-move16"></div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+<script src="js/classie.js"></script>
+<script src='js/layerEffect.js'></script>

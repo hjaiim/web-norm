@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"
+		  name="viewport" id="viewport"/>
+	<style>
+		footer{
+			width: 7.5rem;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			background-color: #fff;
+			height: 0.96rem;
+			font-size: 0.2rem;
+			color: #929292;
+			border-top: 1px solid #cccdd1;
+		}
+		footer div{
+			width: 33.33333%;	/*这个宽度看footer标签里面含有几个div平分，如果有border-left/border-right可以将div设置成box-sizing。这样不会因为border导致长度不够
+	*/
+			float: left;
+			padding-top: 0.14rem;}
+		footer div img{
+			height: 0.36rem;
+			width: 0.36rem;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 0.05rem;
+		}
+		footer div span{
+			text-align: center;
+			display: block;
+		}
+		footer div span.active{
+			color: #00c5cb;
+		}
+	</style>
+	<script>
+		var oHtml = document.getElementsByTagName("html")[0];
+		var screenW = document.documentElement.offsetWidth || document.body.offsetWidth;
+		oHtml.style.fontSize = 100 * screenW / 750 + "px";
+	</script>
+</head>
+<body>
+	<footer>
+		<div>
+			<img src="../images/book_log.jpg" alt="">
+			<span>1</span>
+		</div>
+		<div>
+			<img src="../images/choiceLog.jpg" alt="">
+			<span>2</span>
+		</div>
+		<div>
+			<img src="../images/classtifyLog.jpg" alt="">
+			<span>3</span>
+		</div>
+	</footer>
+</body>
+</html>

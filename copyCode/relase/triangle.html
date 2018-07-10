@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>triangle</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            margin: 0 auto 50px;
+        }
+
+        .triangle-up {
+            width: 0;
+            height: 0;
+            border: 50px solid red;
+            border-color: transparent transparent red;
+        }
+
+        .triangle-down {
+            width: 0;
+            height: 0;
+            border: 50px solid red;
+            border-color: red transparent transparent;
+        }
+
+        .triangle-left {
+            width: 0;
+            height: 0;
+            border: 50px solid red;
+            border-color: transparent red transparent transparent;
+        }
+
+        .triangle-right {
+            width: 0;
+            height: 0;
+            border: 50px solid red;
+            border-color: transparent transparent transparent red;
+        }
+
+        .triangle-bottomleft {
+            width: 0;
+            height: 0;
+            border: 100px solid red;
+            border-color: transparent transparent red red;
+        }
+
+        .triangle-bottomright {
+            width: 0;
+            height: 0;
+            border: 100px solid red;
+            border-color: transparent red red transparent;
+        }
+        .star-five {
+            margin: 50px 0;
+            position: relative;
+            display: block;
+            color: red;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            -moz-transform: rotate(35deg);
+            -webkit-transform: rotate(35deg);
+            -ms-transform: rotate(35deg);
+            -o-transform: rotate(35deg);
+            transform: rotate(35deg);
+            margin: 80px auto;
+        }
+
+        .star-five:before {
+            border-bottom: 80px solid red;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            position: absolute;
+            height: 0;
+            width: 0;
+            top: -45px;
+            left: -65px;
+            display: block;
+            content: '';
+            -webkit-transform: rotate(-35deg);
+            -moz-transform: rotate(-35deg);
+            -ms-transform: rotate(-35deg);
+            -o-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+        }
+
+        .star-five:after {
+            position: absolute;
+            display: block;
+            color: red;
+            top: 3px;
+            left: -105px;
+            width: 0px;
+            height: 0px;
+            border-right: 100px solid transparent;
+            border-bottom: 70px solid red;
+            border-left: 100px solid transparent;
+            -webkit-transform: rotate(-70deg);
+            -moz-transform: rotate(-70deg);
+            -ms-transform: rotate(-70deg);
+            -o-transform: rotate(-70deg);
+            transform: rotate(-70deg);
+            content: '';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="triangle-up"></div>
+    <div class="triangle-down"></div>
+    <div class="triangle-left"></div>
+    <div class="triangle-right"></div>
+
+    <div class="triangle-bottomright"></div>
+    <div class="star-five"></div>
+</body>
+
+</html>

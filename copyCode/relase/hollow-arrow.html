@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css制作空心的上下左右的箭头</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .arrow{
+            display: block;
+            width: 25px;
+            height: 25px;
+            border-right: 1px solid red;
+            border-top: 1px solid red;
+            margin: 50px;
+        }
+        .arrow-left{
+            -webkit-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
+        .arrow-top{
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        .arrow-right{
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .arrow-bottom{
+            -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+    </style>
+    <body>
+        <div class="arrow arrow-left"></div>
+        <div class="arrow arrow-top"></div>
+        <div class="arrow arrow-right"></div>
+        <div class="arrow arrow-bottom"></div>
+    </body>
+
+</html>

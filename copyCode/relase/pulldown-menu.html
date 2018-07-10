@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul>li{
+			list-style: none;
+		}
+
+		.head{
+			height: 80px;
+			width: 100%;
+			background-color: rgba(0,0,0,0.9);
+		}
+
+		header{
+			height: 80px;
+			width: 1280px;
+			margin: 0 auto;
+		}
+		.menu{
+			width: 120px;
+			height: 80px;
+			float: right;
+			color: #fff;
+			font-size: 16px;
+			text-align: center;
+			line-height: 80px;
+			cursor: pointer;
+			position: relative;
+		}
+		.menu:hover>.triangle-up{
+			-webkit-transform: rotate(180deg);
+			-moz-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			-o-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+		.triangle-up {
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border:7px solid red;
+			border-color: transparent transparent #fff;
+			margin-bottom: 3px;
+			-webkit-transition: transform 1s;
+			-moz-transition: transform 1s;
+			-ms-transition: transform 1s;
+			-o-transition: transform 1s;
+			transition: transform 1s;
+			transform-origin: center 90%;
+		}
+		.list{
+			position: absolute;
+			max-height: 1000px;
+			background-color: #000;
+			width: 120px;
+			overflow: hidden;
+			color: #fff;
+			-webkit-transition: max-height 1s;
+			-moz-transition: max-height 1s;
+			-ms-transition: max-height 1s;
+			-o-transition: max-height 1s;
+			transition: max-height 1s;
+			max-height: 0;
+		}
+		.list li{
+			height: 50px;
+			width: 100%;
+			line-height: 50px;
+		}
+		.list li:hover{
+			color: #000000;
+			background-color: #fff;
+		}
+		.menu:hover>.list{
+			max-height: 1000px;
+		}
+	</style>
+</head>
+<body>
+<div class="head">
+	<header>
+		<div class="menu">
+			<span>come on!</span> <span class="triangle-up"></span>
+			<ul class="list">
+				<li>12</li>
+				<li>3223</li>
+				<li>343</li>
+				<li>23</li>
+			</ul>
+		</div>
+	</header>
+</div>
+
+</body>
+</html>
